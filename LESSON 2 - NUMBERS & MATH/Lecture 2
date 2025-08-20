@@ -1,0 +1,320 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "254c1977-45ac-45cc-bfc6-2b50fe2e6db1",
+   "metadata": {},
+   "source": [
+    "# Review Question 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "e9b5979c-37f6-4c37-9127-4f40ce26c24b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "25000000\n",
+      "25000000\n"
+     ]
+    }
+   ],
+   "source": [
+    "num1 = 25000000\n",
+    "num2 = 25_000_000\n",
+    "\n",
+    "print(num1)\n",
+    "print(num2)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "0ad404a9-2b7b-4cd7-967c-c529ff256a2c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "175000.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "num = 1.75e5\n",
+    "print(num)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "fb8075e9-3e59-46ec-ae1f-90d07b616bf3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Smallest N where 2e308 is inf: 308\n"
+     ]
+    }
+   ],
+   "source": [
+    "import math\n",
+    "\n",
+    "N = 308\n",
+    "while True:\n",
+    "    try:\n",
+    "        val = float(f\"2e{N}\")\n",
+    "        if math.isinf(val):\n",
+    "            print(f\"Smallest N where 2e{N} is inf: {N}\")\n",
+    "            break\n",
+    "        N += 1\n",
+    "    except OverflowError:\n",
+    "        print(f\"Overflow at N={N}\")\n",
+    "        break\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a685e6ad-1ab5-40b8-bd56-e36c0390a12c",
+   "metadata": {},
+   "source": [
+    "# Review Question 2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "3af791f8-06d9-4797-91d0-b74337d96fbe",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a base:  2\n",
+      "Enter an exponent:  3\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2.0 to the power of 3.0 = 8.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "base = float(input(\"Enter a base: \"))\n",
+    "exponent = float(input(\"Enter an exponent: \"))\n",
+    "\n",
+    "result = base ** exponent\n",
+    "\n",
+    "print(f\"{base} to the power of {exponent} = {result}\")\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e74f3a12-0369-4db7-b0c7-a4b7cdd627b4",
+   "metadata": {},
+   "source": [
+    "# Review Question 3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "4b639871-3b46-497e-beba-4a157cef9915",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  3\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3.0 rounded to 2 decimal places is 3.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "num = float(input(\"Enter a number: \"))\n",
+    "rounded_num = round(num, 2)\n",
+    "print(f\"{num} rounded to 2 decimal places is {rounded_num}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "aba1940e-9614-42d4-8ff3-0d96db910f41",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  5\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The absolute value of 5.0 is 5.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "num = float(input(\"Enter a number: \"))\n",
+    "abs_value = abs(num)\n",
+    "print(f\"The absolute value of {num} is {abs_value}\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7dc8c567-4049-4f54-9561-07c3611bb3d6",
+   "metadata": {},
+   "source": [
+    "# Review Question 4"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "f2a4d97d-251e-48d7-9d91-8a1c69b84157",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  8\n",
+      "Enter another number:  9\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The difference between 8.0 and 9.0 is an integer? true!\n"
+     ]
+    }
+   ],
+   "source": [
+    "num1 = float(input(\"Enter a number: \"))\n",
+    "num2 = float(input(\"Enter another number: \"))\n",
+    "\n",
+    "difference = abs(num1 - num2)\n",
+    "is_integer = difference.is_integer() \n",
+    "\n",
+    "print(f\"The difference between {num1} and {num2} is an integer? {str(is_integer).lower()}!\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6144c3d4-28b8-4ad0-b8b1-58ce14dbbf29",
+   "metadata": {},
+   "source": [
+    "# Review Question 5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "73a1df96-c8ff-418d-a11e-18aa195b4449",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1.147\n"
+     ]
+    }
+   ],
+   "source": [
+    "result = 3 ** 0.125\n",
+    "print(f\"{result:.3f}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "8fd5d7e6-843e-4622-b9f8-e501c8e48f49",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "$150,000.00\n"
+     ]
+    }
+   ],
+   "source": [
+    "amount = 150000\n",
+    "print(f\"${amount:,.2f}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "91c704ca-31c2-417e-97f5-65d39d827a3c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "20%\n"
+     ]
+    }
+   ],
+   "source": [
+    "percentage = 2 / 10\n",
+    "print(f\"{percentage:.0%}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "cbafc93f-b8c5-49d9-a4c7-f2b9a5897384",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
